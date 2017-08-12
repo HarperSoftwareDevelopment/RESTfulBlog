@@ -1,0 +1,27 @@
+RESTful Routes is a standized way of naming routes
+a mapping between HTTP routes and CRUD
+CREATE READ UPDATE DESTROY
+
+Index       /cats           GET     lists all cats
+
+New         /cats/new       GET     shows new cat form
+Create      /cats           POST    creates new cate, redirects elsewhere
+
+Show        /cats/:id       GET     shows info about one cat
+
+Edit        /cats/:id/edit  GET     shows edit form for cat
+Update      /cat/:id        PUT     update a particular cat, redirects elsewhere
+
+for the update route, it is handled as a PUT request however html cant do PUT requests. 
+the work around to this is to set it as a POST request and use method overide to override 
+it into a PUT request. this is done by adding ?_method=PUT at the end of the link and
+npm installing method-override
+
+Destroy     /cat/:id        DELETE  deletes a particular cat, redirects elsewhere
+
+
+npm install express-sanitizer in order to stop people from running javascript in through
+the html
+
+
+useful styling tools to learn Bootstrap and Semantic
